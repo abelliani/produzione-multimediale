@@ -1,0 +1,282 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6e6e6;
+}
+
+header {
+    padding: 1%;
+    background-color: #000000;
+    color: white;
+}
+
+header ul{
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    padding: 1%;
+    background-color: #000000;
+    color: white;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+header a img {
+    vertical-align: middle;
+    height: 70px;
+}
+
+header a img:hover {
+    border-bottom: 2px solid yellow;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+	border-bottom: 2px solid red;
+}
+
+.box-immagini {
+    max-width: 100%;
+    margin: 20px auto; 
+    overflow: hidden;
+    border: 2px solid #ddd;
+}
+
+.animation {
+    display: flex;
+    animation: slide 20s infinite;
+}
+
+.animation img {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+body p {
+    font-style: italic;
+    font-size: 1.5em;
+    margin-left: 1%;
+}
+
+body ul li {
+    display: inline;
+    margin: 0 15px;
+    align-items: center;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+}
+
+iframe {
+    margin-left: 31%;
+    border: none;
+}
+
+article div {
+    display: flex;
+    flex-direction: row;
+}
+article img {
+    object-fit: cover;
+    border-radius: 10%;
+    width: 100%;
+    min-width: 15%;
+    max-width: 100%;
+    margin: 2%;
+}
+
+#sarrala img {
+    object-fit: cover;
+    border-radius: 10%;
+    width: 50%;
+    min-width: 15%;
+    max-width: 100%;
+    margin: 2%;
+}
+#restaurant img {
+    object-fit: cover;
+    border-radius: 10%;
+    width: 50%;
+    min-width: 15%;
+    max-width: 100%;
+    margin: 2%;
+}
+
+
+#info {
+ text-align: center;
+}
+
+#paesaggi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    margin-top: 20px;
+}
+
+#paesaggi img {
+    object-fit: cover;
+    max-width: 30%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#pulsanti {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1%;
+}
+
+#avanti {
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #dccdba;
+    color: #3f2d29;
+}
+
+#indietro {
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #dccdba;
+    color: #3f2d29;
+}
+
+#inizia {
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #dccdba;
+    color: #3f2d29;
+}
+
+#indietro:hover, #avanti:hover, #startStop:hover, #inizia:hover {
+    background-color: #3f2d29;;
+    color: #dccdba;
+}
+
+#startStop {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #dccdba;
+    color: #3f2d29;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 5%;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    .box-immagini {
+        margin: 10px auto;
+    }
+
+    article div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    iframe {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #paesaggi {
+        flex-direction: column;
+    }
+    
+    #paesaggi img {
+        min-width: 50%; 
+    }
+
+    #pulsanti {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header a {
+        font-size: 20px;
+    }
+
+    header a img {
+        height: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .animation img {
+        width: 100%;
+    }
+
+    article img {
+        min-width: 50%;
+        margin: 5% auto;
+    }
+    
+    #paesaggi img {
+        min-width: 50%;
+        margin: 0% auto;
+    }
+
+    #pulsanti {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #avanti, #indietro, #startStop {
+        margin: 5px;
+    }
+}
